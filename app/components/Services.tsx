@@ -78,8 +78,10 @@ export default function Services() {
             <div key={index} className={`service-card bg-white rounded-xl p-8 shadow-lg border-t-4 border-transparent hover:border-gradient-to-r ${service.animation}`} style={{animationDelay: `${index * 0.2}s`}}>
               <div className="flex items-center mb-6">
                 <div className={`${service.bgColor} p-4 rounded-xl mr-4 relative overflow-hidden`}>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-10`}></div>
-                  <service.icon className={`h-10 w-10 bg-gradient-to-br ${service.color} bg-clip-text text-transparent relative z-10`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-20`}></div>
+                  <service.icon className={`h-10 w-10 relative z-10`} style={{
+                    color: service.color.includes('cyan') ? '#0891b2' : service.color.includes('blue') ? '#2563eb' : service.color.includes('green') ? '#059669' : service.color.includes('purple') ? '#7c3aed' : service.color.includes('orange') ? '#ea580c' : '#dc2626'
+                  }} />
                   {service.title.includes('AC') && (
                     <div className="absolute -top-1 -right-1">
                       <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>

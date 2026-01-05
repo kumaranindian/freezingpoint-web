@@ -26,27 +26,27 @@ export default function Hero() {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Expert <span className="ac-blow cooling-effect">AC Repair</span> Services in 
-              <span className="text-yellow-300"> Pallikaranai</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
+              Expert <span className="ac-blow cooling-effect text-cyan-200 drop-shadow-md">AC Repair</span> Services in 
+              <span className="text-yellow-300 drop-shadow-md"> Pallikaranai</span>
             </h1>
-            <p className="text-xl mb-8 text-gray-100">
+            <p className="text-xl mb-8 text-white drop-shadow-md">
               Professional air conditioner repair, installation & maintenance services. 
               Trusted by 315+ customers with 4.4★ rating.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+              <div className="flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-300" />
-                <span>Same Day Service</span>
+                <span className="text-white font-medium">Same Day Service</span>
               </div>
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+              <div className="flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-300" />
-                <span>All Brands Supported</span>
+                <span className="text-white font-medium">All Brands Supported</span>
               </div>
-              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+              <div className="flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/30">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-300" />
-                <span>Expert Technicians</span>
+                <span className="text-white font-medium">Expert Technicians</span>
               </div>
             </div>
 
@@ -78,7 +78,7 @@ export default function Hero() {
                     <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
                     <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
                   </div>
-                  <div className="text-sm text-cyan-200">Cooling in Progress</div>
+                  <div className="text-sm text-white font-semibold drop-shadow-md">Cooling in Progress</div>
                 </div>
                 {/* AC Blow Effect */}
                 <div className="absolute -right-8 top-1/2 transform -translate-y-1/2">
@@ -99,8 +99,8 @@ export default function Hero() {
                   <Star className="h-8 w-8 fill-current" />
                 </div>
               </div>
-              <h3 className="text-3xl font-bold mb-2">4.4/5 Rating</h3>
-              <p className="text-gray-200">Based on 315+ customer reviews</p>
+              <h3 className="text-3xl font-bold mb-2 text-white drop-shadow-md">4.4/5 Rating</h3>
+              <p className="text-white drop-shadow-sm">Based on 315+ customer reviews</p>
               <div className="mt-4">
                 <div className="trust-badge text-sm">
                   <Clock className="h-3 w-3 inline mr-1" />
@@ -114,15 +114,15 @@ export default function Hero() {
                 <div className="cooling-effect inline-block mb-2">
                   <Snowflake className="h-8 w-8 text-cyan-300 mx-auto" />
                 </div>
-                <h4 className="text-2xl font-bold">500+</h4>
-                <p className="text-gray-200">ACs Repaired</p>
+                <h4 className="text-2xl font-bold text-white drop-shadow-md">500+</h4>
+                <p className="text-white drop-shadow-sm">ACs Repaired</p>
               </div>
               <div className="testimonial-card bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all">
                 <div className="cooling-effect inline-block mb-2">
                   <Shield className="h-8 w-8 text-green-300 mx-auto" />
                 </div>
-                <h4 className="text-2xl font-bold">2005</h4>
-                <p className="text-gray-200">Since</p>
+                <h4 className="text-2xl font-bold text-white drop-shadow-md">2005</h4>
+                <p className="text-white drop-shadow-sm">Since</p>
               </div>
             </div>
 
