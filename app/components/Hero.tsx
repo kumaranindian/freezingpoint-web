@@ -89,7 +89,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-6">
+            <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 mb-6 border border-gray-700/50">
               <div className="flex items-center justify-center mb-4">
                 <div className="flex text-yellow-400 text-2xl">
                   <Star className="h-8 w-8 fill-current" />
@@ -99,8 +99,8 @@ export default function Hero() {
                   <Star className="h-8 w-8 fill-current" />
                 </div>
               </div>
-              <h3 className="text-3xl font-bold mb-2 text-white drop-shadow-md">4.4/5 Rating</h3>
-              <p className="text-white drop-shadow-sm">Based on 315+ customer reviews</p>
+              <h3 className="text-3xl font-bold mb-2 text-white">4.4/5 Rating</h3>
+              <p className="text-gray-200">Based on 315+ customer reviews</p>
               <div className="mt-4">
                 <div className="trust-badge text-sm">
                   <Clock className="h-3 w-3 inline mr-1" />
@@ -110,19 +110,19 @@ export default function Hero() {
             </div>
 
             <div className="grid grid-cols-2 gap-4 text-center">
-              <div className="testimonial-card bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all">
+              <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl p-4 hover:bg-gray-800/90 transition-all border border-gray-700/50">
                 <div className="cooling-effect inline-block mb-2">
                   <Snowflake className="h-8 w-8 text-cyan-300 mx-auto" />
                 </div>
-                <h4 className="text-2xl font-bold text-white drop-shadow-md">500+</h4>
-                <p className="text-white drop-shadow-sm">ACs Repaired</p>
+                <h4 className="text-2xl font-bold text-white">500+</h4>
+                <p className="text-gray-200">ACs Repaired</p>
               </div>
-              <div className="testimonial-card bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all">
+              <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl p-4 hover:bg-gray-800/90 transition-all border border-gray-700/50">
                 <div className="cooling-effect inline-block mb-2">
                   <Shield className="h-8 w-8 text-green-300 mx-auto" />
                 </div>
-                <h4 className="text-2xl font-bold text-white drop-shadow-md">2005</h4>
-                <p className="text-white drop-shadow-sm">Since</p>
+                <h4 className="text-2xl font-bold text-white">2005</h4>
+                <p className="text-gray-200">Since</p>
               </div>
             </div>
 
