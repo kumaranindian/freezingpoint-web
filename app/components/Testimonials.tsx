@@ -93,49 +93,69 @@ export default function Testimonials() {
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-gray-50 rounded-xl p-6 relative">
+          {testimonials.map((testimonial, index) => (
+            <div key={testimonial.id} className={`testimonial-card rounded-xl p-6 relative float-animation`} style={{animationDelay: `${index * 0.3}s`}}>
               <div className="absolute top-4 right-4">
-                <Quote className="h-8 w-8 text-primary-200" />
+                <Quote className="h-8 w-8 text-primary-200 opacity-50" />
               </div>
               
               {/* Rating */}
               <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`h-5 w-5 ${
-                      i < testimonial.rating
-                        ? 'text-yellow-400 fill-current'
-                        : 'text-gray-300'
-                    }`}
-                  />
-                ))}
-                <span className="ml-2 text-sm text-gray-600">{testimonial.date}</span>
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`h-5 w-5 transition-all duration-300 ${
+                        i < testimonial.rating
+                          ? 'text-yellow-400 fill-current transform scale-110'
+                          : 'text-gray-300'
+                      }`}
+                      style={{animationDelay: `${i * 0.1}s`}}
+                    />
+                  ))}
+                </div>
+                <span className="ml-3 text-sm text-gray-600 bg-gray-100 px-2 py-1 rounded-full">{testimonial.date}</span>
               </div>
 
               {/* Review */}
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-6 leading-relaxed italic">
                 "{testimonial.review}"
               </p>
 
               {/* Customer Info */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <div className="bg-primary-100 p-2 rounded-full mr-3">
+                  <div className="bg-gradient-to-br from-primary-100 to-primary-200 p-3 rounded-full mr-3 cooling-effect">
                     <User className="h-5 w-5 text-primary-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.location}</p>
+                    <p className="text-sm text-gray-600 flex items-center">
+                      📍 {testimonial.location}
+                    </p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                    testimonial.service.includes('AC') 
+                      ? 'bg-cyan-100 text-cyan-700 trust-badge' 
+                      : testimonial.service.includes('Emergency')
+                      ? 'bg-red-100 text-red-700 trust-badge'
+                      : 'bg-primary-100 text-primary-700'
+                  }`}>
+                    {testimonial.service.includes('AC') && '❄️ '}
+                    {testimonial.service.includes('Emergency') && '🚨 '}
                     {testimonial.service}
                   </span>
                 </div>
               </div>
+
+              {/* Service-specific visual elements */}
+              {testimonial.service.includes('AC') && (
+                <div className="absolute bottom-4 left-4 opacity-10">
+                  <div className="ac-blow text-lg">❄️</div>
+                </div>
+              )}
             </div>
           ))}
         </div>

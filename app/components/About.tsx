@@ -4,8 +4,16 @@ import { Award, Users, Clock, MapPin } from 'lucide-react'
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 professional-gradient">
+      <div className="container mx-auto px-4 relative">
+        {/* Floating Elements */}
+        <div className="absolute top-10 right-10 float-animation opacity-10">
+          <div className="text-4xl">🔧</div>
+        </div>
+        <div className="absolute bottom-10 left-10 float-animation opacity-10" style={{animationDelay: '3s'}}>
+          <div className="text-3xl">⚡</div>
+        </div>
+        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -24,43 +32,47 @@ export default function About() {
             </p>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="flex items-start">
-                <div className="bg-primary-100 p-3 rounded-lg mr-4">
-                  <Award className="h-6 w-6 text-primary-600" />
+              <div className="flex items-start float-animation" style={{animationDelay: '0.5s'}}>
+                <div className="bg-gradient-to-br from-blue-100 to-cyan-100 p-4 rounded-xl mr-4 cooling-effect">
+                  <Award className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Certified Technicians</h4>
                   <p className="text-gray-600 text-sm">Expert professionals with years of experience</p>
+                  <div className="trust-badge text-xs mt-2">✓ Licensed</div>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-primary-100 p-3 rounded-lg mr-4">
-                  <Users className="h-6 w-6 text-primary-600" />
+              <div className="flex items-start float-animation" style={{animationDelay: '1s'}}>
+                <div className="bg-gradient-to-br from-green-100 to-emerald-100 p-4 rounded-xl mr-4 cooling-effect">
+                  <Users className="h-6 w-6 text-green-600" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">315+ Happy Customers</h4>
                   <p className="text-gray-600 text-sm">Trusted by families across Chennai</p>
+                  <div className="trust-badge text-xs mt-2">4.4★ Rated</div>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-primary-100 p-3 rounded-lg mr-4">
-                  <Clock className="h-6 w-6 text-primary-600" />
+              <div className="flex items-start float-animation" style={{animationDelay: '1.5s'}}>
+                <div className="bg-gradient-to-br from-orange-100 to-yellow-100 p-4 rounded-xl mr-4 cooling-effect">
+                  <Clock className="h-6 w-6 text-orange-600" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Same Day Service</h4>
                   <p className="text-gray-600 text-sm">Quick response and efficient repairs</p>
+                  <div className="trust-badge text-xs mt-2">🚀 Fast</div>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-primary-100 p-3 rounded-lg mr-4">
-                  <MapPin className="h-6 w-6 text-primary-600" />
+              <div className="flex items-start float-animation" style={{animationDelay: '2s'}}>
+                <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-4 rounded-xl mr-4 cooling-effect">
+                  <MapPin className="h-6 w-6 text-purple-600" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Local Experts</h4>
                   <p className="text-gray-600 text-sm">Serving Pallikaranai and surrounding areas</p>
+                  <div className="trust-badge text-xs mt-2">📍 Local</div>
                 </div>
               </div>
             </div>
